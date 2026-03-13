@@ -759,7 +759,7 @@ const QuickLinksComponent = (function() {
       // Delete button
       const deleteButton = document.createElement('button');
       deleteButton.className = 'link-delete';
-      deleteButton.textContent = 'Delete';
+      deleteButton.textContent = '×';
       deleteButton.setAttribute('aria-label', `Delete link: ${link.name}`);
       deleteButton.addEventListener('click', () => deleteLink(link.id));
 

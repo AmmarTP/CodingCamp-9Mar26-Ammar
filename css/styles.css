@@ -300,12 +300,12 @@ form button {
   background-color: var(--text-secondary);
 }
 
-.todo-edit:hover {
-  background-color: var(--text-primary);
-}
-
 .todo-delete {
   background-color: #e74c3c;
+}
+
+.todo-edit:hover {
+  background-color: var(--text-primary);
 }
 
 .todo-delete:hover {
@@ -344,8 +344,15 @@ form button {
 
 .link-item button {
   padding: 0.25rem 0.5rem;
-  font-size: 0.75rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1;
   background-color: #e74c3c;
+  min-width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .link-item button:hover {
