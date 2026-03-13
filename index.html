@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productivity Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Greeting Section -->
+    <section class="greeting-section">
+      <h1 id="greeting"></h1>
+      <div id="time"></div>
+      <div id="date"></div>
+    </section>
+
+    <!-- Timer Section -->
+    <section class="timer-section">
+      <h2>Focus Timer</h2>
+      <div id="timer-display">25:00</div>
+      <div class="timer-controls">
+        <button id="timer-start">Start</button>
+        <button id="timer-stop">Stop</button>
+        <button id="timer-reset">Reset</button>
+      </div>
+    </section>
+
+    <!-- Settings Section -->
+    <section class="settings-section">
+      <div class="setting-item">
+        <span class="setting-label">Dark Mode</span>
+        <label class="toggle-switch">
+          <input type="checkbox" id="dark-mode-toggle">
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+      <div class="setting-item">
+        <span class="setting-label">Duplicates Task Detection</span>
+        <label class="toggle-switch">
+          <input type="checkbox" id="duplicates-toggle">
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+      <div class="stats-container">
+        <div class="stat-item">
+          <span class="stat-label">TASKS:</span>
+          <span class="stat-value" id="total-tasks">0</span>
+          <span class="stat-unit">total</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">DONE:</span>
+          <span class="stat-value" id="completed-tasks">0</span>
+          <span class="stat-unit">completed</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Todo Section -->
+    <section class="todo-section">
+      <h2>To-Do List</h2>
+      <form id="todo-form">
+        <label for="todo-input" class="visually-hidden">New task</label>
+        <input type="text" id="todo-input" placeholder="Add a new task..." aria-label="New task">
+        <button type="submit">Add</button>
+      </form>
+      
+      <!-- Task Filter and Sort Controls -->
+      <div class="task-controls">
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-filter="all">ALL</button>
+          <button class="filter-tab" data-filter="active">ACTIVE</button>
+          <button class="filter-tab" data-filter="done">DONE</button>
+        </div>
+        <div class="sort-dropdown">
+          <select id="task-sort">
+            <option value="newest">SORT: NEWEST</option>
+            <option value="oldest">SORT: OLDEST</option>
+            <option value="a-z">SORT: A-Z</option>
+            <option value="z-a">SORT: Z-A</option>
+          </select>
+        </div>
+      </div>
+      
+      <ul id="todo-list"></ul>
+    </section>
+
+    <!-- Quick Links Section -->
+    <section class="links-section">
+      <h2>Quick Links</h2>
+      <form id="links-form">
+        <label for="link-name" class="visually-hidden">Link name</label>
+        <input type="text" id="link-name" placeholder="Link name" aria-label="Link name">
+        <label for="link-url" class="visually-hidden">Link URL</label>
+        <input type="text" id="link-url" placeholder="URL" aria-label="Link URL">
+        <button type="submit">Add</button>
+      </form>
+      <div id="links-container"></div>
+    </section>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
